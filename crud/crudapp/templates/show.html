@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/custom.css' %}">
+{% block content %}
+<table class="" border=1>  
+    <thead>  
+    <tr>  
+        <th>Device ID</th>
+        <th>Username</th>  
+        <th>Email</th>
+        <th>Password</th>
+        <th>Contact</th>    
+        <th>Actions</th>  
+    </tr>  
+    </thead>  
+    <tbody>  
+    {% for dev in deviceData %}  
+    <tr>
+    	<td>{{ dev.deviceid }}</td>
+    	<td>{{ dev.username }}</td>    
+        <td>{{ dev.email }}</td>  
+        <td>{{ dev.passwd }}</td>  
+        <td>{{ dev.contact }}</td>
+  
+  
+        <td>  
+            <a href="/edit/{{ dev.id}}">Edit</a>  
+            <a href="/delete/{{ dev.id }}">- Delete</a>  
+        </td>  
+    </tr>  
+    {% endfor %}  
+    </tbody>  
+</table>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static '/custom.css' %}">
+{% block content %}
+<form method="POST" class="post-form" action="/update/{{deviceData.id}}">
+    {% csrf_token %}  
+<br>
+    <label>Device ID</label>
+    <input type="text" name="deviceid" value="{{ deviceData.deviceid }}"/>  <br><br>
+ 
+    <label>Username</label>
+    <input type="text" name="username" value="{{ deviceData.username }}"/>  <br><br>
+    
+     <label>Email</label>
+    <input type="text" name="email" value="{{ deviceData.email }}"/>  <br><br>   
+
+    <label>Password</label>
+    <input type="text" name="passwd" value="{{ deviceData.passwd }}" />  <br><br>
+   
+    <label>Device ID</label>
+    <input type="text" name="contact" value="{{ deviceData.contact}}"/>  <br><br>
+    
+
+    <button type="submit">Submit</button>  
+</form>  
+{% endblock %}

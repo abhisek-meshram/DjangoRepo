@@ -1,0 +1,22 @@
+body
+{
+	background: gray;
+	text-align: center;
+	color: darkgray;
+}
+
+a
+{
+	text-size: 50px;
+	color : red;
+}
+h1
+{
+	color: green;
+	background: green;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}

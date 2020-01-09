@@ -1,0 +1,17 @@
+{% load static %}
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static '/custom.css' %}">
+
+<a href="/" >Home</a> &nbsp;&nbsp;
+<a href="/create">+Add Device</a> &nbsp;&nbsp;
+<a href="/show">All Device</a>
+<hr>
+<!-- Page Content loads here -->
+<center>
+{% block content %}
+{% endblock %}
+</center>
+
+<!--./Page Content-->
+<hr>
+<h5>© Oggy4ever 2020. All rights reserved</h5>

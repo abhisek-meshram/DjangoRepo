@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static '/custom.css' %}">
+{% block content %}
+<form method="POST" class="post-form" action="/create">
+    {% csrf_token %}  
+<br>
+
+    <label>Device ID</label> {{ form.deviceid }}<br><br>
+	<label>Username</label>  {{ form.username }}<br><br>
+    <label>Email</label> 	 {{ form.email }}<br><br>
+    <label>Password</label>	 {{ form.passwd }}<br><br>
+	<label>Contact</label>	 {{ form.contact }}<br><br>
+
+    <button type="submit">Submit</button>  
+</form>  
+{% endblock %}
